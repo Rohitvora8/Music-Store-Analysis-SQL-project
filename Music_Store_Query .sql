@@ -1,7 +1,3 @@
-rohit music stor sql
-
-
-
 
 /* Q1: Who is the senior most employee based on job title? */
 
@@ -29,8 +25,7 @@ LIMIT 3
 
 
 
-/* Q4: Which city has the best customers? We would like to throw a promotional Music
-Festival in the city we made the most money. 
+/* Q4: Which city has the best customers? We would like to throw a promotional Music Festival in the city we made the most money. 
 Write a query that returns one city that has the highest sum of invoice totals. 
 Return both the city name & sum of all invoice totals */
 
@@ -41,8 +36,7 @@ ORDER BY InvoiceTotal DESC
 LIMIT 1;
 
 
-/* Q5: Who is the best customer? The customer who has spent the most money will be declared the best 
-       customer. 
+/* Q5: Who is the best customer? The customer who has spent the most money will be declared the best customer. 
        Write a query that returns the person who has spent the most money.*/
 SELECT * FROM customer
 SELECT * FROM invoice
@@ -87,8 +81,7 @@ ORDER BY number_of_songs DESC
 LIMIT 10;
 
 
-/* Q3: Return all the track names that have a song length longer than the average song length. 
-Return the Name and Milliseconds for each track.
+/* Q3: Return all the track names that have a song length longer than the average song length. Return the Name and Milliseconds for each track.
 Order by the song length with the longest songs listed first. */
 
 SELECT name,milliseconds
@@ -99,17 +92,7 @@ WHERE milliseconds > (
 ORDER BY milliseconds DESC;
 
 
-
-
-/* Question Set 3 - Advance */
-
 /* Q1: Find how much amount spent by each customer on artists? Write a query to return customer name, artist name and total spent */
-
-/* Steps to Solve: First, find which artist has earned the most according to the InvoiceLines. Now use this artist to find 
-which customer spent the most on this artist. For this query, you will need to use the Invoice, InvoiceLine, Track, Customer, 
-Album, and Artist tables. Note, this one is tricky because the Total spent in the Invoice table might not be on a single product, 
-so you need to use the InvoiceLine table to find out how many of each product was purchased, and then multiply this by the price
-for each artist. */
 
 WITH best_selling_artist AS (
 	SELECT artist.artist_id AS artist_id, artist.name AS artist_name, 
@@ -154,8 +137,7 @@ SELECT * FROM popular_genre WHERE RowNo <= 1
 
 
 
-/* Q3: Write a query that determines the customer that has spent the most on music for each country. 
-Write a query that returns the country along with the top customer and how much they spent. 
+/* Q3: Write a query that determines the customer that has spent the most on music for each country.Write a query that returns the country along with the top customer and how much they spent. 
 For countries where the top amount spent is shared, provide all customers who spent this amount. */
 
 WITH Customter_with_country AS (
