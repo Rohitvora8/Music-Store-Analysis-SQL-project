@@ -6,9 +6,9 @@ The Music Store Data Analysis project involves analyzing a music store's dataset
 ## Schema
 ![](https://github.com/Rohitvora8/Music-Store-Analysis-SQL-project/blob/main/MusicDatabaseSchema.png?raw=true)
 
-##/* Question set : 1 */
+## Question set : 1 
 
-###/* Q1: Who is the senior most employee based on job title? */
+### Q1: Who is the senior most employee based on job title? 
 
 select first_name, last_name, levels
 from employee
